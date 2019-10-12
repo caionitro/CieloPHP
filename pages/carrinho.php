@@ -1,6 +1,5 @@
 <?php 
 	require "../includes/include.php";
-	//teste para ver de funciona
 ?>
 <html>
 	<head>
