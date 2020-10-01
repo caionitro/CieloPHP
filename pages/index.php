@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Loja Exemplo : Menu</title>
+		<title>Loja Exemplo: Menu</title>
 	</head>
 	<center>
 		<h2>
