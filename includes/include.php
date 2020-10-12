@@ -16,14 +16,12 @@ if(!isset($_SESSION["pedidos"]))
 // CONSTANTES
 define("ENDERECO_BASE", "https://qasecommerce.cielo.com.br");
 define("ENDERECO", ENDERECO_BASE."/servicos/ecommwsec.do");
-
 define("LOJA", "1006993069");
 define("LOJA_CHAVE", "25fbb99741c739dd84d7b06ec78c9bac718838630f30b112d033ce2e621b34f3");
 define("CIELO", "1001734898");
 define("CIELO_CHAVE", "e84827130b9837473681c2787007da5914d6359947015a5cdb2b8843db0fa832");
 
-
-// Envia requisição
+// Envia requisiÃ§Ã£o
 function httprequest($paEndereco, $paPost){
 
 	$sessao_curl = curl_init();
@@ -39,22 +37,22 @@ function httprequest($paEndereco, $paPost){
 	curl_setopt($sessao_curl, CURLOPT_SSL_VERIFYHOST, 2);
 
 	//  CURLOPT_SSL_CAINFO
-	//  informa a localização do certificado para verificação com o peer
+	//  informa a localizaÃ§Ã£o do certificado para verificaÃ§Ã£o com o peer
 	curl_setopt($sessao_curl, CURLOPT_CAINFO, getcwd() .
 			"/ssl/VeriSignClass3PublicPrimaryCertificationAuthority-G5.crt");
 	curl_setopt($sessao_curl, CURLOPT_SSLVERSION, 3);
 
 	//  CURLOPT_CONNECTTIMEOUT
-	//  o tempo em segundos de espera para obter uma conexão
+	//  o tempo em segundos de espera para obter uma conexÃ£o
 	curl_setopt($sessao_curl, CURLOPT_CONNECTTIMEOUT, 10);
 
 	//  CURLOPT_TIMEOUT
-	//  o tempo máximo em segundos de espera para a execução da requisição (curl_exec)
+	//  o tempo mÃ¡ximo em segundos de espera para a execuÃ§Ã£o da requisiÃ§Ã£o (curl_exec)
 	curl_setopt($sessao_curl, CURLOPT_TIMEOUT, 40);
 
 	//  CURLOPT_RETURNTRANSFER
 	//  TRUE para curl_exec retornar uma string de resultado em caso de sucesso, ao
-	//  invés de imprimir o resultado na tela. Retorna FALSE se há problemas na requisição
+	//  invÃ©s de imprimir o resultado na tela. Retorna FALSE se hÃ¡ problemas na requisiÃ§Ã£o
 	curl_setopt($sessao_curl, CURLOPT_RETURNTRANSFER, true);
 
 	curl_setopt($sessao_curl, CURLOPT_POST, true);
@@ -98,5 +96,4 @@ function ReturnURL()
 
 	return $ReturnURL;
 }
-
 ?>
